@@ -9,10 +9,11 @@
 #define Q(x, n) ((sin((x)*(n+1)))/(sin(n*x)))*(1/(n+1))
 int main()
 {
-	double x, e = 2.7, S = 0.0, a = 1.0;
+	double x = 1, e = 2.7, S = 0.0;
 	printf("Enter (x): ");
 	int w = scanf_s("%lf", &x);
 	if (x <= 1 && x >= 0) {
+		double a = sin(x);
 		unsigned int n, N = 10;
 		for (n = 1; n < N; ++n) {
 			S += a;
